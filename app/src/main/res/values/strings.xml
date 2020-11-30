@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The MIT License (MIT)
+  Copyright © 2012 Steve Guidetti
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the “Software”), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+<resources>
+    <string name="app_name" translatable="false">Periodic-Table</string>
+
+    <string name="titleAbout">About Elementary</string>
+    <string name="titleElementDetails" formatted="true">Element details for %s</string>
+    <string name="titlePeriodicTable">Periodic Table of the Elements</string>
+    <string name="titleElementList">List of elements</string>
+    <string name="titleSettings">Elementary settings</string>
+    <string name="titleSort">Sort by</string>
+
+    <string name="buttonVideo">Watch video</string>
+    <string name="buttonWiki">Wikipedia</string>
+    <string name="buttonSort">Sort</string>
+    <string name="buttonZoom">Zoom</string>
+
+    <string name="menuAbout">About</string>
+    <string name="menuSettings">Settings</string>
+    <string name="menuList">List view</string>
+    <string name="menuTable">Table view</string>
+
+    <string name="prefKeyDarkTheme" translatable="false">theme</string>
+    <string name="prefTitleDarkTheme">Dark theme</string>
+    <string name="prefKeyTemp" translatable="false">tempUnit</string>
+    <string name="prefTitleTemp">Temperature units</string>
+    <string name="prefSummaryTemp">Units used to display temperature values</string>
+    <string name="prefKeyColors" translatable="false">elementColors</string>
+    <string name="prefTitleColors">Element colors</string>
+    <string name="prefSummaryColors">Property used to color the elements</string>
+    <string name="prefKeySubtextValue" translatable="false">subtextValue</string>
+    <string name="prefTitleSubtextValue">Block value</string>
+    <string name="prefSummarySubtextValue">The value to display under the element symbol</string>
+    <string name="prefKeyShowControls" translatable="false">showControls</string>
+    <string name="prefTitleShowControls">Periodic Table controls</string>
+    <string name="prefSummaryShowControls">Show the controls for the Periodic Table in the table view</string>
+
+    <string name="labelNumber">Atomic number</string>
+    <string name="labelSymbol">Symbol</string>
+    <string name="labelName">Name</string>
+    <string name="labelWeight">Atomic weight</string>
+    <string name="labelCategory">Category</string>
+    <string name="labelGPB">Group, period, block</string>
+    <string name="labelConfiguration">Electron configuration</string>
+    <string name="labelElectrons">Electrons per shell</string>
+    <string name="labelDensity">Density</string>
+    <string name="labelMelt">Melting point</string>
+    <string name="labelBoil">Boiling point</string>
+    <string name="labelHeat">Specific heat</string>
+    <string name="labelNegativity">Electronegativity</string>
+    <string name="labelAbundance">Abundance</string>
+    <string name="labelIsotopes">Common isotopes</string>
+    <string name="labelIsoComp">Isotopic composition</string>
+
+    <string name="labelSubtextValue">Display</string>
+    <string name="labelBlockColors">Color by</string>
+
+    <string name="hintFilter">Filter by name or symbol</string>
+
+    <string name="aboutVersion">Version</string>
+    <string name="aboutWebsite">Website</string>
+    <string name="aboutLicense">License</string>
+    <string name="aboutSources">Sources</string>
+    <string name="aboutWebsiteUrl" translatable="false">https://evrenglobalsolutions.com/</string>
+    <string name="aboutLicenseName" translatable="false">MIT License</string>
+    <string name="aboutLicenseUrl" translatable="false">https://evrenglobalsolutions.com/</string>
+    <string name="aboutCopyright" translatable="false">Copyright © 2020 Evren Global Solutions</string>
+    <string name="aboutCitations" translatable="false"><![CDATA[Coursey, J.S., Schwab, D.J., Tsai, J.J., and Dragoset, R.A. (2015), Atomic Weights and Isotopic Compositions (version 4.1). [Online] Available: http://physics.nist.gov/Comp [2016, December 17]. National Institute of Standards and Technology, Gaithersburg, MD.
+\n\nDayah, M. (1997, October 1). Dynamic Periodic Table. Retrieved December 18, 2016, from Ptable: http://www.ptable.com]]></string>
+
+    <string name="descTableBlock" formatted="true" translatable="false">%1$d, %2$s, %3$s, %4$s %5$s, %6$s %7$s</string>
+    <string name="descGroup">group</string>
+    <string name="descPeriod">period</string>
+    <string name="descBlock">block</string>
+
+    <string name="unknown">unknown</string>
+</resources>

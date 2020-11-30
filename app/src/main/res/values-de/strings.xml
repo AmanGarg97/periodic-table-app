@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The MIT License (MIT)
+  Copyright © 2012 Steve Guidetti, C4R2T3N
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the “Software”), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+<resources>
+    <string name="titleAbout">Über Elementary</string>
+    <string name="titleElementDetails" formatted="true">Element Details für %s</string>
+    <string name="titlePeriodicTable">Periodensystem der Elemente</string>
+    <string name="titleElementList">Liste aller Elemente</string>
+    <string name="titleSettings">Elementary Einstellungen</string>
+    <string name="titleSort">Sortieren nach</string>
+
+    <string name="buttonVideo">Video</string>
+    <string name="buttonWiki">Wikipedia</string>
+    <string name="buttonSort">Sortieren</string>
+    <string name="buttonZoom">Zoom</string>
+
+    <string name="menuAbout">Information</string>
+    <string name="menuSettings">Einstellungen</string>
+    <string name="menuList">Listen-Ansicht</string>
+    <string name="menuTable">Tabellen-Ansicht</string>
+
+    <string name="prefTitleDarkTheme">Dunkles Theme</string>
+    <string name="prefTitleTemp">Maßeinheit</string>
+    <string name="prefSummaryTemp">Bevorzugtes Einheitensystem</string>
+    <string name="prefTitleColors">Elementfarben</string>
+    <string name="prefSummaryColors">Bevorzugtes Farbschema</string>
+    <string name="prefTitleSubtextValue">Blockwert</string>
+    <string name="prefSummarySubtextValue">Der unter dem Elementsymbol angezeigte Wert</string>
+    <string name="prefTitleShowControls">Tabellenansicht Steuerung</string>
+    <string name="prefSummaryShowControls">Zeigen Sie die Bedienelemente für das Periodensystem in der Tabellenansicht</string>
+
+    <string name="labelNumber">Ordnungszahl</string>
+    <string name="labelSymbol">Symbol</string>
+    <string name="labelName">Name</string>
+    <string name="labelWeight">Atomgewicht</string>
+    <string name="labelCategory">Serie</string>
+    <string name="labelGPB">Gruppe, Periode, Block</string>
+    <string name="labelConfiguration">Elektronenkonfiguration</string>
+    <string name="labelElectrons">Elektronen pro Schale</string>
+    <string name="labelDensity">Dichte</string>
+    <string name="labelMelt">Schmelzpunkt</string>
+    <string name="labelBoil">Siedepunkt</string>
+    <string name="labelHeat">Spezifisch Hitze</string>
+    <string name="labelNegativity">Elektronegativität</string>
+    <string name="labelAbundance">Vorkommen</string>
+    <string name="labelIsotopes">Gemeinsame Isotope</string>
+    <string name="labelIsoComp">Isotopenzusammensetzung</string>
+
+    <string name="labelSubtextValue">Anzeigen</string>
+    <string name="labelBlockColors">Färben nach</string>
+
+    <string name="hintFilter">Nach Name oder Symbol sortieren</string>
+
+    <string name="aboutVersion">Version</string>
+    <string name="aboutWebsite">Webseite</string>
+    <string name="aboutLicense">Lizenz</string>
+    <string name="aboutSources">Quellen</string>
+
+    <string name="descGroup">Gruppe</string>
+    <string name="descPeriod">Periode</string>
+    <string name="descBlock">Block</string>
+
+    <string name="unknown">unbekannt</string>
+</resources>

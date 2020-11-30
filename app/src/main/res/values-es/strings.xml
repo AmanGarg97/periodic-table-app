@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The MIT License (MIT)
+  Copyright © 2012 Steve Guidetti
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the “Software”), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+<resources>
+    <string name="titleAbout">Acerca de Elementary</string>
+    <string name="titleElementDetails" formatted="true">Detalles elemento por %s</string>
+    <string name="titlePeriodicTable">Tabla Periódica de los Elementos</string>
+    <string name="titleElementList">Lista de elementos</string>
+    <string name="titleSettings">Ajustes de Elementary</string>
+    <string name="titleSort">Ordenar por</string>
+
+    <string name="buttonVideo">Ver video</string>
+    <string name="buttonWiki">Wikipedia</string>
+    <string name="buttonSort">Clase</string>
+    <string name="buttonZoom">Enfocar</string>
+
+    <string name="menuAbout">Información</string>
+    <string name="menuSettings">Ajustes</string>
+    <string name="menuList">Vista de la lista</string>
+    <string name="menuTable">Vista de la tabla</string>
+
+    <string name="prefTitleDarkTheme">Tema oscuro</string>
+    <string name="prefTitleTemp">Unidades temperatura</string>
+    <string name="prefSummaryTemp">Unidades utilizan para mostrar los valores de temperatura</string>
+    <string name="prefTitleColors">Colores elemento</string>
+    <string name="prefSummaryColors">Propiedad utiliza para dar color a los elementos</string>
+    <string name="prefTitleSubtextValue">Valor de bloque</string>
+    <string name="prefSummarySubtextValue">Valor a mostrar bajo el símbolo del elemento</string>
+    <string name="prefTitleShowControls">Controles de Tabla Periódica</string>
+    <string name="prefSummaryShowControls">Mostrar los controles de Tabla Periódica en la vista de tabla</string>
+
+    <string name="labelNumber">Número atómico</string>
+    <string name="labelSymbol">Símbolo</string>
+    <string name="labelName">Nombre</string>
+    <string name="labelWeight">Peso atomico</string>
+    <string name="labelCategory">Serie química</string>
+    <string name="labelGPB">Grupo, período, bloque</string>
+    <string name="labelConfiguration">Configuración electrónica</string>
+    <string name="labelElectrons">Electrones por nivel</string>
+    <string name="labelDensity">Densidad</string>
+    <string name="labelMelt">Punto de fusión</string>
+    <string name="labelBoil">Punto de ebullición</string>
+    <string name="labelHeat">Calor especifico</string>
+    <string name="labelNegativity">Electronegatividad</string>
+    <string name="labelAbundance">Abundancia</string>
+    <string name="labelIsotopes">Isótopos comunes</string>
+    <string name="labelIsoComp">Composición isotópica</string>
+
+    <string name="labelSubtextValue">Mostrar</string>
+    <string name="labelBlockColors">Colorear por</string>
+
+    <string name="hintFilter">Filtrar por nombre o símbolo</string>
+
+    <string name="aboutVersion">Versión</string>
+    <string name="aboutWebsite">Sitio Web</string>
+    <string name="aboutLicense">Licencia</string>
+    <string name="aboutSources">Fuentes</string>
+
+    <string name="descGroup">grupo</string>
+    <string name="descPeriod">período</string>
+    <string name="descBlock">bloque</string>
+
+    <string name="unknown">desconocido</string>
+</resources>
