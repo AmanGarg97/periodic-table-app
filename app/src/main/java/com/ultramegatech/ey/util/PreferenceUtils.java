@@ -80,7 +80,7 @@ public class PreferenceUtils {
      * @return Whether to use the dark theme
      */
     public static boolean getPrefDarkTheme() {
-        return sPreferences.getBoolean(KEY_DARK_THEME, true);
+        return sPreferences.getBoolean(KEY_DARK_THEME, false);
     }
 
     /**

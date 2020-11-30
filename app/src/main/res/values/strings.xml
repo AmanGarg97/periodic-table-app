@@ -69,6 +69,7 @@
     <string name="labelBoil">Boiling point</string>
     <string name="labelHeat">Specific heat</string>
     <string name="labelNegativity">Electronegativity</string>
+    <string name="labelStateAtRTP">State At RTP</string>
     <string name="labelAbundance">Abundance</string>
     <string name="labelIsotopes">Common isotopes</string>
     <string name="labelIsoComp">Isotopic composition</string>

@@ -25,6 +25,8 @@ package com.ultramegatech.ey.provider;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.Objects;
+
 /**
  * Container for a single element.
  *
@@ -92,6 +94,9 @@ public class Element {
     @Nullable
     public final Double negativity;
 
+    @Nullable
+    public final String state;
+
     /**
      * The abundance in mg/kg
      */
@@ -137,12 +142,13 @@ public class Element {
      * @param configuration The electron configuration
      * @param electrons     The number of electrons per shell
      * @param unstable      Whether the element is unstable
+     * @param state         RTP of element
      */
     Element(int number, @NonNull String symbol, int group, int period, char block, double weight,
             @Nullable Double density, @Nullable Double melt, @Nullable Double boil,
             @Nullable Double heat, @Nullable Double negativity, @Nullable Double abundance,
             int category, @NonNull Configuration configuration, @NonNull Integer[] electrons,
-            boolean unstable) {
+            boolean unstable, @NonNull String state) {
         this.number = number;
         this.symbol = symbol;
         this.group = group;
@@ -159,7 +165,12 @@ public class Element {
         this.configuration = configuration;
         this.electrons = electrons;
         this.unstable = unstable;
+        this.state = state;
     }
+
+//    public Element(int i, String h, int i1, int i2, char s, double v, double v1, double v2, double v3, double v4, double v5, double v6, int i3, Configuration s1, Integer[] integers, boolean b, String a) {
+//        number = 0;
+//    }
 
     /**
      * Represents the electron configuration of an element.

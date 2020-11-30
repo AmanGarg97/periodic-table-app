@@ -21,7 +21,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!--
         The colors and corresponding names for the element categories
     -->
@@ -104,13 +104,14 @@
         <item>neg</item>
         <item>ab</item>
     </string-array>
-    <string-array name="subtextValueNames">
+    <string-array name="subtextValueNames" tools:ignore="InconsistentArrays">
         <item>Atomic weight</item>
         <item>Density (g/cm³)</item>
         <item>Melting point (K)</item>
         <item>Boiling point (K)</item>
         <item>Specific heat (J/g·K)</item>
         <item>Electronegativity (Pauling)</item>
+        <item>State at RTP</item>
         <item>Abundance (mg/kg)</item>
     </string-array>
 

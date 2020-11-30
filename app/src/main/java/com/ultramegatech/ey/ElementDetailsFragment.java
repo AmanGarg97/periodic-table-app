@@ -106,6 +106,7 @@ public class ElementDetailsFragment extends DialogFragment
     private TextView mTxtBoil;
     private TextView mTxtHeat;
     private TextView mTxtNegativity;
+    private TextView mTxtStateAtRTP;
     private TextView mTxtAbundance;
 
     /**
@@ -226,6 +227,7 @@ public class ElementDetailsFragment extends DialogFragment
         mTxtBoil = root.findViewById(R.id.boil);
         mTxtHeat = root.findViewById(R.id.heat);
         mTxtNegativity = root.findViewById(R.id.negativity);
+        mTxtStateAtRTP = root.findViewById(R.id.state);
         mTxtAbundance = root.findViewById(R.id.abundance);
 
         mIsoTable = root.findViewById(R.id.isoTable);
@@ -286,6 +288,7 @@ public class ElementDetailsFragment extends DialogFragment
         mTxtBoil.setText(getTemperature(mElement.boil));
         mTxtHeat.setText(getHeat());
         mTxtNegativity.setText(getNegativity());
+        mTxtStateAtRTP.setText(getStateAtRTP());
         mTxtAbundance.setText(getAbundance());
 
         populateIsotopes();
@@ -465,6 +468,14 @@ public class ElementDetailsFragment extends DialogFragment
     private String getNegativity() {
         if(mElement.negativity != null) {
             return DECIMAL_FORMAT.format(mElement.negativity);
+        }
+        return mStringUnknown;
+    }
+
+    @NonNull
+    private String getStateAtRTP() {
+        if(mElement.state != null) {
+            return mElement.state;
         }
         return mStringUnknown;
     }
