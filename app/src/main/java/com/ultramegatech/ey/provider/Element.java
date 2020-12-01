@@ -92,6 +92,19 @@ public class Element {
     @Nullable
     public final Double negativity;
 
+    @Nullable
+    public final String state;
+
+    @Nullable
+    public final String colourIon;
+
+    @Nullable
+    public final String test;
+
+
+    @Nullable
+    public final String colour;
+
     /**
      * The abundance in mg/kg
      */
@@ -137,12 +150,17 @@ public class Element {
      * @param configuration The electron configuration
      * @param electrons     The number of electrons per shell
      * @param unstable      Whether the element is unstable
+     * @param state         To show rtp
+     * @param colour        To show colour
+     * @param colourIon     To show colour of ion
+     * @param test          To show test
      */
     Element(int number, @NonNull String symbol, int group, int period, char block, double weight,
             @Nullable Double density, @Nullable Double melt, @Nullable Double boil,
             @Nullable Double heat, @Nullable Double negativity, @Nullable Double abundance,
             int category, @NonNull Configuration configuration, @NonNull Integer[] electrons,
-            boolean unstable) {
+            boolean unstable, @Nullable String state, @Nullable String colour,
+            @Nullable String colourIon, @Nullable String test) {
         this.number = number;
         this.symbol = symbol;
         this.group = group;
@@ -159,6 +177,10 @@ public class Element {
         this.configuration = configuration;
         this.electrons = electrons;
         this.unstable = unstable;
+        this.state = state;
+        this.colour = colour;
+        this.colourIon = colourIon;
+        this.test = test;
     }
 
     /**

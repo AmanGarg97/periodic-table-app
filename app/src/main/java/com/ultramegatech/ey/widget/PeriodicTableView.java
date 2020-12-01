@@ -1050,6 +1050,12 @@ public class PeriodicTableView extends View {
                 case PreferenceUtils.SUBTEXT_NEGATIVITY:
                     mSubtextLabel = res.getString(R.string.labelNegativity);
                     break;
+                case PreferenceUtils.SUBTEXT_STATE:
+                    mSubtextLabel = res.getString(R.string.labelState);
+                    break;
+                case PreferenceUtils.SUBTEXT_COLOUR:
+                    mSubtextLabel = res.getString(R.string.labelColour);
+                    break;
                 case PreferenceUtils.SUBTEXT_ABUNDANCE:
                     mSubtextLabel = res.getString(R.string.labelAbundance);
                     break;
@@ -1126,6 +1132,12 @@ public class PeriodicTableView extends View {
                     break;
                 case PreferenceUtils.SUBTEXT_NEGATIVITY:
                     subtext = element.negativity == null ? mUnknownString : block.subtext;
+                    break;
+                case PreferenceUtils.SUBTEXT_STATE:
+                    subtext = element.state == null ? mUnknownString : block.subtext;
+                    break;
+                case PreferenceUtils.SUBTEXT_COLOUR:
+                    subtext = element.colour == null ? mUnknownString : block.subtext;
                     break;
                 case PreferenceUtils.SUBTEXT_ABUNDANCE:
                     subtext = element.abundance == null ? mUnknownString : block.subtext;

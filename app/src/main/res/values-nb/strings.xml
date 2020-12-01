@@ -65,6 +65,12 @@
     <string name="labelAbundance">Forekomst</string>
     <string name="labelIsotopes">Vanlige isotoper</string>
     <string name="labelIsoComp">Isotopisk sammensetning</string>
+    <string name="labelState">State At RTP</string>
+    <string name="labelColour">Colour At RTP</string>
+    <string name="labelColourIon">Colour Of Ion</string>
+    <string name="labelTest">Test</string>
+
+
 
     <string name="labelSubtextValue">Vis</string>
     <string name="labelBlockColors">Farg etter</string>

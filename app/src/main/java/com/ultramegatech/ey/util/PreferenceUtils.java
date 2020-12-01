@@ -67,6 +67,10 @@ public class PreferenceUtils {
     public static final String SUBTEXT_HEAT = "heat";
     public static final String SUBTEXT_NEGATIVITY = "neg";
     public static final String SUBTEXT_ABUNDANCE = "ab";
+    public static final String SUBTEXT_STATE = "stat";
+    public static final String SUBTEXT_COLOUR = "color";
+
+
 
     private static SharedPreferences sPreferences;
 
@@ -80,7 +84,7 @@ public class PreferenceUtils {
      * @return Whether to use the dark theme
      */
     public static boolean getPrefDarkTheme() {
-        return sPreferences.getBoolean(KEY_DARK_THEME, true);
+        return sPreferences.getBoolean(KEY_DARK_THEME, false);
     }
 
     /**

@@ -65,6 +65,12 @@
     <string name="labelAbundance">存在度</string>
     <string name="labelIsotopes">共通同位体</string>
     <string name="labelIsoComp">同位体組成</string>
+    <string name="labelState">State At RTP</string>
+    <string name="labelColour">Colour At RTP</string>
+    <string name="labelColourIon">Colour Of Ion</string>
+    <string name="labelTest">Test</string>
+
+
 
     <string name="labelSubtextValue">表示</string>
     <string name="labelBlockColors">色</string>

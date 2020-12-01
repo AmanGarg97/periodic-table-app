@@ -42,6 +42,8 @@
                 android:layout_height="wrap_content"
                 android:stretchColumns="1">
 
+
+
                 <TableRow style="@style/TableRow.Odd">
 
                     <TextView
@@ -206,6 +208,60 @@
 
                     <TextView
                         android:id="@+id/abundance"
+                        style="@style/ElementDetails.Value" />
+                </TableRow>
+
+                <TableRow style="@style/TableRow.Odd">
+
+                    <TextView
+                        style="@style/ElementDetails.Label"
+                        android:labelFor="@+id/colour"
+                        android:text="@string/labelColour" />
+
+                    <TextView
+                        android:id="@+id/colour"
+                        style="@style/ElementDetails.Value" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/TableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/ElementDetails.Label"
+                        android:labelFor="@+id/state"
+                        android:text="@string/labelState" />
+
+                    <TextView
+                        android:id="@+id/state"
+                        style="@style/ElementDetails.Value" />
+                </TableRow>
+
+                <TableRow style="@style/TableRow.Odd">
+
+                    <TextView
+                        style="@style/ElementDetails.Label"
+                        android:labelFor="@+id/colourIon"
+                        android:text="@string/labelColourIon" />
+
+                    <TextView
+                        android:id="@+id/colourIon"
+                        style="@style/ElementDetails.Value" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/TableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/ElementDetails.Label"
+                        android:labelFor="@+id/test"
+                        android:text="@string/labelTest" />
+
+                    <TextView
+                        android:id="@+id/test"
                         style="@style/ElementDetails.Value" />
                 </TableRow>
             </TableLayout>

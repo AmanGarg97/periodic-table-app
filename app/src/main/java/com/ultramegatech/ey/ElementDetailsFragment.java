@@ -107,6 +107,10 @@ public class ElementDetailsFragment extends DialogFragment
     private TextView mTxtHeat;
     private TextView mTxtNegativity;
     private TextView mTxtAbundance;
+    private TextView mTxtState;
+    private TextView mTxtColour;
+    private TextView mTxtColourIon;
+    private TextView mTxtTest;
 
     /**
      * The table for common isotopes.
@@ -227,6 +231,10 @@ public class ElementDetailsFragment extends DialogFragment
         mTxtHeat = root.findViewById(R.id.heat);
         mTxtNegativity = root.findViewById(R.id.negativity);
         mTxtAbundance = root.findViewById(R.id.abundance);
+        mTxtState = root.findViewById(R.id.state);
+        mTxtColour = root.findViewById(R.id.colour);
+        mTxtColourIon = root.findViewById(R.id.colourIon);
+        mTxtTest = root.findViewById(R.id.test);
 
         mIsoTable = root.findViewById(R.id.isoTable);
 
@@ -286,7 +294,12 @@ public class ElementDetailsFragment extends DialogFragment
         mTxtBoil.setText(getTemperature(mElement.boil));
         mTxtHeat.setText(getHeat());
         mTxtNegativity.setText(getNegativity());
+        mTxtState.setText(getState());
         mTxtAbundance.setText(getAbundance());
+        mTxtColour.setText(getColour());
+        mTxtColourIon.setText(getColourIon());
+        mTxtTest.setText(getTest());
+
 
         populateIsotopes();
     }
@@ -465,6 +478,38 @@ public class ElementDetailsFragment extends DialogFragment
     private String getNegativity() {
         if(mElement.negativity != null) {
             return DECIMAL_FORMAT.format(mElement.negativity);
+        }
+        return mStringUnknown;
+    }
+
+    @Nullable
+    private String getState() {
+        if(mElement.state != null) {
+            return mElement.state;
+        }
+        return mStringUnknown;
+    }
+
+    @Nullable
+    private String getColour() {
+        if(mElement.colour != null) {
+            return mElement.colour;
+        }
+        return mStringUnknown;
+    }
+
+    @Nullable
+    private String getColourIon() {
+        if(mElement.colourIon != null) {
+            return mElement.colourIon;
+        }
+        return mStringUnknown;
+    }
+
+    @Nullable
+    private String getTest() {
+        if(mElement.test != null) {
+            return mElement.test;
         }
         return mStringUnknown;
     }

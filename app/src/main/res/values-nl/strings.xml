@@ -67,6 +67,12 @@
     <string name="labelAbundance">Abundantie</string>
     <string name="labelIsotopes">Gemeenschappelijke isotopen</string>
     <string name="labelIsoComp">Isotopische samenstelling</string>
+    <string name="labelState">State At RTP</string>
+    <string name="labelColour">Colour At RTP</string>
+    <string name="labelColourIon">Colour Of Ion</string>
+    <string name="labelTest">Test</string>
+
+
 
     <string name="labelSubtextValue">Geef weer</string>
     <string name="labelBlockColors">Kleur per</string>

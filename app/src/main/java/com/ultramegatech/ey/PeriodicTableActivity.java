@@ -394,6 +394,16 @@ public class PeriodicTableActivity extends AppCompatActivity
                     return String.valueOf(element.negativity);
                 }
                 break;
+            case PreferenceUtils.SUBTEXT_STATE:
+                if(element.state != null) {
+                    return String.valueOf(element.state);
+                }
+                break;
+            case PreferenceUtils.SUBTEXT_COLOUR:
+                if(element.colour != null) {
+                    return String.valueOf(element.colour);
+                }
+                break;
         }
         return "?";
     }

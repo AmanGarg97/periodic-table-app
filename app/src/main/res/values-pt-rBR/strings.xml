@@ -65,6 +65,12 @@
     <string name="labelAbundance">Abundância</string>
     <string name="labelIsotopes">Isótopos comuns</string>
     <string name="labelIsoComp">Composição isotópica</string>
+    <string name="labelState">State At RTP</string>
+    <string name="labelColour">Colour At RTP</string>
+    <string name="labelColourIon">Colour Of Ion</string>
+    <string name="labelTest">Test</string>
+
+
 
     <string name="labelSubtextValue">Mostrar</string>
     <string name="labelBlockColors">Colorir por</string>
