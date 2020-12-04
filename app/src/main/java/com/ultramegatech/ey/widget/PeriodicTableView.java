@@ -894,7 +894,25 @@ public class PeriodicTableView extends View {
     public boolean onTouchEvent(MotionEvent event) {
         boolean ret = mScaleGestureDetector.onTouchEvent(event);
         ret = mGestureDetector.onTouchEvent(event) || ret;
+
+        // check if any action was clicked...
+        int touchX = (int) event.getX();
+        int touchY = (int) event.getY();
+        switch(event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                System.out.println("Touching down!");
+                this.mLegend.onClick((int) event.getX(), (int) event.getY());
+                break;
+            case MotionEvent.ACTION_UP:
+                this.mLegend.clickComplete();
+                System.out.println("Touching up!");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                System.out.println("Sliding your finger around on the screen.");
+                break;
+        }
         return ret || super.onTouchEvent(event);
+
     }
 
     @Override
@@ -954,6 +972,7 @@ public class PeriodicTableView extends View {
             ViewCompat.postInvalidateOnAnimation(this);
         }
     }
+
 
     @Override
     protected void onDraw(Canvas canvas) {

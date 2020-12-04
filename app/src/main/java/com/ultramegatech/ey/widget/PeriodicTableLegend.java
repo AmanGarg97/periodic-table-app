@@ -22,11 +22,15 @@
  */
 package com.ultramegatech.ey.widget;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.nfc.Tag;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -34,8 +38,12 @@ import com.ultramegatech.ey.R;
 import com.ultramegatech.ey.util.ElementUtils;
 import com.ultramegatech.ey.util.PreferenceUtils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 /**
@@ -67,12 +75,13 @@ class PeriodicTableLegend {
      */
     @NonNull
     private final Rect mRect = new Rect();
-
+    Context context;
     /**
      * @param context The Context
      */
     PeriodicTableLegend(@NonNull Context context) {
         invalidate(context);
+        this.context = context;
     }
 
     /**
@@ -138,7 +147,7 @@ class PeriodicTableLegend {
             mRect.left = rect.left + n / rows * boxWidth + 1;
             mRect.bottom = mRect.top + boxHeight - 1;
             mRect.right = mRect.left + boxWidth - 1;
-
+            this.rects.put(entry.getValue(), new Rect(mRect));
             mPaint.setColor(ElementUtils.getKeyColor(entry.getKey()));
             canvas.drawRect(mRect, mPaint);
 
@@ -147,5 +156,56 @@ class PeriodicTableLegend {
 
             n++;
         }
+    }
+
+    HashMap<String, Rect> rects = new HashMap<String, Rect>();
+    public boolean wasDown = false;
+    String valClicked = "";
+    void onClick(int x, int y) {
+        if(this.wasDown) return;
+        this.wasDown = true;
+        Iterator it = rects.entrySet().iterator();
+        while(it.hasNext()) {
+            Map.Entry<String, Rect> pair = (Map.Entry)it.next();
+            if(pair.getValue().contains(x, y)) {
+                Log.d("Clicking", "onClick: selected: " + pair.getKey());
+                this.valClicked = pair.getKey();
+                break;
+            }
+
+        }
+    }
+    void clickComplete() {
+        this.wasDown = false;
+        Log.d("Click Complete", "clickComplete: " + this.valClicked);
+        if(this.valClicked == "") return ;
+        AlertDialog alertDialog = new AlertDialog.Builder(this.context).create();
+        alertDialog.setTitle(this.valClicked);
+        alertDialog.setMessage("Malleable \n" +
+                "Ductile \n" +
+                "Lose 1 electron to form cations \n" +
+                "Solids at rtp \n" +
+                "Low density\n" +
+                "Good conductors of heat and electricity \n" +
+                "\n" +
+                "React with water to produce H2 gas \n" +
+                "eg: M + H20 —> M(OH) + H2\n" +
+                "Metal oxides are generally basic in nature \n" +
+                "\n" +
+                "Bonding : Positive kernels immersed in a sea of delocalised electrons resulting in metallic bonding.\n" +
+                "\n" +
+                "\n" +
+                "Periodic Trends\n" +
+                "Down the group,\n" +
+                "no. of shells increases, shielding increases. Therefore, effective nuclear charge decreases and atomic radius increases.\n" +
+                "Ionisation energy decreases \n" +
+                "Metallic property (ability to lose electrons) increases \n" +
+                "Reactivity increases \n");
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.cancel();
+            } });
+        alertDialog.show();
+        this.valClicked = "";
     }
 }
