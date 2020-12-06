@@ -22,7 +22,7 @@
   THE SOFTWARE.
 -->
 <resources>
-    <string name="app_name" translatable="false">Periodic-Table</string>
+    <string name="app_name" translatable="false">Yukta Made It Easy</string>
 
     <string name="titleAbout">About Elementary</string>
     <string name="titleElementDetails" formatted="true">Element details for %s</string>
