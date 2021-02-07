@@ -22,20 +22,33 @@
  */
 package com.ultramegatech.ey.widget;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+//import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+//import android.nfc.Tag;
+import android.text.Html;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
+import com.ultramegatech.ey.AboutFragment;
 import com.ultramegatech.ey.R;
+import com.ultramegatech.ey.SettingsActivity;
 import com.ultramegatech.ey.util.ElementUtils;
 import com.ultramegatech.ey.util.PreferenceUtils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 /**
@@ -67,12 +80,13 @@ class PeriodicTableLegend {
      */
     @NonNull
     private final Rect mRect = new Rect();
-
+    Context context;
     /**
      * @param context The Context
      */
     PeriodicTableLegend(@NonNull Context context) {
         invalidate(context);
+        this.context = context;
     }
 
     /**
@@ -138,7 +152,7 @@ class PeriodicTableLegend {
             mRect.left = rect.left + n / rows * boxWidth + 1;
             mRect.bottom = mRect.top + boxHeight - 1;
             mRect.right = mRect.left + boxWidth - 1;
-
+            this.rects.put(entry.getValue(), new Rect(mRect));
             mPaint.setColor(ElementUtils.getKeyColor(entry.getKey()));
             canvas.drawRect(mRect, mPaint);
 
@@ -147,5 +161,138 @@ class PeriodicTableLegend {
 
             n++;
         }
+    }
+
+    HashMap<String, Rect> rects = new HashMap<String, Rect>();
+    public boolean wasDown = false;
+    String valClicked = "";
+    void onClick(int x, int y) {
+        if(this.wasDown) return;
+        this.wasDown = true;
+        Iterator it = rects.entrySet().iterator();
+        while(it.hasNext()) {
+            Map.Entry<String, Rect> pair = (Map.Entry)it.next();
+            if(pair.getValue().contains(x, y)) {
+                Log.d("Clicking", "onClick: selected: " + pair.getKey());
+                this.valClicked = pair.getKey();
+                break;
+            }
+
+        }
+    }
+
+    String getText(@Nullable String titleName) {
+        String text = "• " + titleName;
+        switch(titleName) {
+            case "Alkali metal":
+                text = "• Malleable \n" +
+                        "• Ductile \n" +
+                        "• Lose 1 electron to form cations \n" +
+                        "• Solids at rtp \n" +
+                        "• Low density\n" +
+                        "• Good conductors of heat and electricity \n" +
+                        "\n" +
+                        "• React with water to produce H2 gas \n" +
+                        "eg: M + H20 —> M(OH) + H2\n" +
+                        "• Metal oxides are generally basic in nature \n" +
+                        "\n" +
+                        "• Bonding : Positive kernels immersed in a sea of delocalised electrons resulting in metallic bonding.\n" +
+                        "\n" +
+                        "\n" +
+                        "• Periodic Trends\n" +
+                        "Down the group,\n" +
+                        "1. no. of shells increases, shielding increases. Therefore, effective nuclear charge decreases and atomic radius increases.\n" +
+                        "2. Ionisation energy decreases \n" +
+                        "3. Metallic property (ability to lose electrons) increases \n" +
+                        "4. Reactivity increases \n";
+                return text;
+            case "Alkaline earth metal":
+                text = "• Malleable \n" +
+                        "• Ductile \n" +
+                        "• Lose 2 electrons to form cations \n" +
+                        "• Solids at rtp \n" +
+                        "• Low density\n" +
+                        "• Good conductors of heat and electricity \n" +
+                        "• Less reactive than alkali metals \n" +
+                        "\n" +
+                        "• React with water to produce H2 gas \n" +
+                        "eg: M + 2H20 —> M(OH)2 + H2\n" +
+                        "• Metal oxides are generally basic in nature \n" +
+                        "\n" +
+                        "Bonding : Positive kernels immersed in a sea of delocalised electrons resulting in metallic bonding.\n" +
+                        "\n" +
+                        "\n" +
+                        "• Periodic Trends\n" +
+                        "Down the group,\n" +
+                        "1. no. of shells increases, shielding increases. Therefore, effective nuclear charge decreases and atomic radius increases.\n" +
+                        "2. Ionisation energy decreases \n" +
+                        "3. Metallic property (ability to lose electrons) increases \n" +
+                        "4. Reactivity increases \n";
+                return text;
+            case "Transition metal":
+                text = "• Form stable ions having partially filled d orbitals \n" +
+                        "• Exhibit variable oxidation states \n" +
+                        "• Are used as catalysts\n" +
+                        "• Form coloured compounds \n" +
+                        "• Higher MP and BP than representative metals \n" +
+                        "• Harder and more tensile than representative metals \n" +
+                        "• High density \n" +
+                        "\n" +
+                        "\n" +
+                        "• Periodic Properties\n" +
+                        "• Down the group,\n" +
+                        "1. No. of shells increases, shielding increases. Therefore, effective nuclear charge decreases and atomic radius increases.\n" +
+                        "2. Ionisation energy decreases \n" +
+                        "3. Metallic property (ability to lose electrons) increases \n" +
+                        "4. Reactivity increases \n";
+                return text;
+            case "Metalliod":
+                text = "• Exhibit properties of both metals and nonmetals";
+                return text;
+            case "Non-metal":
+                text = "• Low BP and MP\n" +
+                        "• Generally liquids and gases at rtp or brittle solids at rtp.\n" +
+                        "\n" +
+                        "• Form acidic oxides\n" +
+                        "• Acidic oxides dissolved in water form acids \n" +
+                        "HCl (g) + H20 ——> HCl (aq)\n" +
+                        "\n" +
+                        "• Bonding : can share electrons to form covalent bonds.\n" +
+                        "\n" +
+                        "• Periodic Properties\n" +
+                        "\n" +
+                        "Down the group,\n" +
+                        "1. no. of shells increases, shielding increases. Therefore, effective nuclear charge decreases and atomic radius increases.\n" +
+                        "2. Electronegativity decreases ( F is most electronegative element)\n" +
+                        "3. Non metallic property (ability to gain electrons) decreases \n" +
+                        "4. Reactivity decreases \n";
+                return text;
+            case "Noble gas":
+                text = "• Are inert because they have completely filled valence shells ";
+                return text;
+            case "Actinide":
+                text = "• All actinides are radioactive ";
+                return text;
+        }
+
+        return text;
+    }
+
+
+    void clickComplete() {
+        this.wasDown = false;
+        Log.d("Click Complete", "clickComplete: " + this.valClicked);
+        if(this.valClicked == "") return ;
+        AlertDialog alertDialog = new AlertDialog.Builder(this.context).create();
+        alertDialog.setTitle(this.valClicked);
+//        alertDialog.setTitle(Html.fromHtml("<font color='#008000''>"this.valClicked;"</font>"));
+        String message = getText(this.valClicked);
+        alertDialog.setMessage(message);
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.cancel();
+            } });
+        alertDialog.show();
+        this.valClicked = "";
     }
 }
